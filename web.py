@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
+import sys
 
-file = requests.get("https://en.wikipedia.org/wiki/Python_(programming_language)")
+file = requests.get("https://en.wikipedia.org/wiki/" + sys.argv[1])
 
 c = file.content
 
